@@ -22,9 +22,10 @@ public class LeapYearTest {
 		assertTrue(leapYear.isLeapYear(2016));
 	}
 
-	@Test
-	public void when2015ThenNonLeapYear() {
-		assertFalse(leapYear.isLeapYear(2015));
+	@ParameterizedTest
+	@ValueSource(ints = { 2015, 2018, 2019 })
+    public void whenNotDivisibleBy4ThenNonLeapYear(int year) {
+		assertFalse(leapYear.isLeapYear(year));
 	}
 
 	@ParameterizedTest
