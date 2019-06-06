@@ -25,4 +25,8 @@ public class LeapYearTest {
 		assertFalse(leapYear.isLeapYear(2015));
 	}
 
+	@Test
+	public void when1700ThenNonLeapYear() {
+		assertFalse(leapYear.isLeapYear(1700));
+	}
 }
