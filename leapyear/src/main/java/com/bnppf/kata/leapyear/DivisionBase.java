@@ -2,7 +2,7 @@ package com.bnppf.kata.leapyear;
 
 public enum DivisionBase {
 
-	FOUR(4), HUNDRED(100), FOUR_HUNDRED(400);
+	FOUR(4), HUNDRED(100), FOUR_HUNDRED(400), FOUR_THOUSAND(4000);
 
 	private int base;
 
