@@ -1,6 +1,8 @@
 package com.bnppf.kata.leapyear;
 
-import static com.bnppf.kata.leapyear.DivisionBase.*;
+import static com.bnppf.kata.leapyear.DivisionBase.FOUR;
+import static com.bnppf.kata.leapyear.DivisionBase.FOUR_HUNDRED;
+import static com.bnppf.kata.leapyear.DivisionBase.HUNDRED;
 
 public class LeapYear {
 
