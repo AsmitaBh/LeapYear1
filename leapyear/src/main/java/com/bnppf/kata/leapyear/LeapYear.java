@@ -9,15 +9,19 @@ public class LeapYear {
 	}
 
 	private boolean isMiltipleOf400(int year) {
-		return year%FOUR_HUNDRED.getBase() == 0;
+		return isMultipleOf(year, FOUR_HUNDRED);
 	}
 
 	private boolean isNotMiltipleOf100(int year) {
-		return year%HUNDRED.getBase() != 0;
+		return !isMultipleOf(year, HUNDRED);
 	}
 
 	private boolean isMultipleOf4(int year) {
-		return year%FOUR.getBase() == 0;
+		return isMultipleOf(year, FOUR);
+	}
+	
+	private boolean isMultipleOf(int year, DivisionBase base) {
+		return year % base.getBase() == 0;
 	}
 
 }
