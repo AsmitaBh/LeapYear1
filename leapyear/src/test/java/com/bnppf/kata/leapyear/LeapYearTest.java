@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -38,5 +39,11 @@ public class LeapYearTest {
 	@ValueSource(ints = { 2000, 2400 })
 	public void whenDivisibleBy400ThenLeapYear(int year) {
 		assertTrue(leapYear.isLeapYear(year));
+	}
+	
+	@Test
+	public void when4000ThenNonLeapYear() {
+		LeapYear leapYear = new LeapYear();
+		assertFalse(leapYear.isLeapYear(4000));
 	}
 }
